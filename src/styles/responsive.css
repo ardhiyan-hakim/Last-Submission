@@ -1,0 +1,271 @@
+
+@media screen and (max-width: 1200px) {
+    .jumbotron img {
+        width: 100%;
+        height: auto;
+    }
+
+    .restaurant__detail {
+        width: 900px;
+    }
+
+    .article__rating__city p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    #navbar__logo {
+        padding-left : 15px;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.38s;
+        height: 50vh;
+        z-index: -1;
+        background: var(--primary-color);
+    }
+
+    .navbar__menu.active {
+        background-color: var(--primary-color);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.38s;
+        z-index: 99;
+        height: 40vh;
+        font-size: 1.5rem;
+    }
+
+    .navbar__toggle .bar {
+        min-width: 50px;
+        height: 6px;
+        margin: 10px auto 0px;
+        transition: all 0.38s;
+        background: var(--secondary-color);
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        border: none;
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .restaurant__detail {
+        width: 720px;
+    }
+
+    .restaurant__list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .jumbotron__textbox a h1 {
+        font-size: 2rem;
+    }
+
+   .restaurant__detail {
+    width: 600px;
+   }
+
+    .restaurant__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .food__menu, .beverage__menu {
+        font-size: 1rem;
+    }
+    
+    #navbar__logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron__textbox a h1 {
+        font-size: 1rem;
+    }
+
+    .main__header h2 {
+        font-size: 1.5rem;
+    }
+
+    .restaurant__detail {
+        max-width: 450px;
+    }
+
+    .restaurant__list {
+        grid-template-columns: 1fr 1fr;
+    }     
+
+    .food__menu h4, .beverage__menu h4 {
+        font-size: 1.2rem;
+    }
+    
+    .food__menu, .beverage__menu {
+        font-size: 12px;
+    }
+
+    .review__menu h4 {
+        font-size: 1.2rem;
+        width: 30%;
+    }    
+    
+    .review__content h5 {
+        font-size: 0.9rem;
+    }
+
+    .review__content p {
+        right: 25px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jumbotron__textbox a h1 {
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+
+    .navbar__menu.active {
+        height: 50vh;
+    }
+
+    .main__header h2 {
+        font-size: 1rem;
+    }
+
+    .restaurant__detail {
+        max-width: 360px;
+    }
+
+    .restaurant__list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .restaurant__rating h4, .restaurant__city h4 {
+        padding: 8px 24px;
+        font-size: 1rem;
+    }
+
+    .restaurant__info {
+        padding: 24px;
+        font-size: 1rem;
+    }
+    
+    article {
+        padding: 24px 0;
+        height: 100%;
+    }
+
+    article img {
+        width: 150px;
+        height: auto;
+    }
+
+    .material-icons-outlined {
+        font-size: inherit;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .jumbotron__textbox a h1 {
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+
+    .main__header h2 {
+        margin-bottom: 0px;
+    }
+
+    .restaurant__detail {
+        max-width: 300px;
+    }
+    
+    .restaurant__list {
+        max-width: 170px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant__rating__city {
+        margin-top: 15px;
+    }
+
+    .restaurant__rating h4, .restaurant__city h4 {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+
+    .restaurant__info {
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .food__menu, .beverage__menu {
+        font-size: 10px;
+    }
+
+    .review__menu h4 {
+        width: 35%;
+    }    
+    
+    footer p {
+        font-size: 0.7rem;
+    }
+}
