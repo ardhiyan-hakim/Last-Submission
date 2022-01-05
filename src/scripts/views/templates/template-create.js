@@ -8,7 +8,7 @@ const createRestaurantItemTemplate = (restaurant) => `
    <div class="restaurant__item" aria-label="Button to access ${restaurant.name}">
       <a href="#/detail/${restaurant.id}" style="text-decoration: none;">
          <article>
-            <img src="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}" alt="Gambar dari Restoran ${restaurant.name}">
+            <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}" alt="Gambar dari Restoran ${restaurant.name}">
             <div class="article__content">
                <p>${restaurant.name}</p>
                <div class="article__rating__city">
@@ -26,7 +26,7 @@ const createRestaurantDetailHeader = (headerName) => `
 `;
 
 const createRestaurantDetailTemplate = (restaurant) => `
-   <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}" alt="${restaurant.name}" />
+   <img class="lazyload restaurant__poster" data-src="${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}" alt="${restaurant.name}" />
    <div class="restaurant__rating__city">
       <div class="restaurant__rating">
          <h4>${restaurant.rating}<span class="material-icons-outlined">star_purple500</span></h4>
