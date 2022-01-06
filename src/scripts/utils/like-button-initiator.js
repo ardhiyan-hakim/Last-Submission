@@ -32,7 +32,7 @@ const LikeButtonInitiator = {
     return !!restaurant;
   },
 
-  _renderLike() {
+  async _renderLike() {
     this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
@@ -41,7 +41,7 @@ const LikeButtonInitiator = {
     });
   },
 
-  _renderLiked() {
+  async _renderLiked() {
     this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
