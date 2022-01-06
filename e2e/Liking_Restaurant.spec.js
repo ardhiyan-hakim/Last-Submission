@@ -5,7 +5,6 @@ Feature('Liking and Unliking Restaurants');
 Before(({ I }) => {
   I.amOnPage('/#/like');
 });
-
 Scenario('Liking a restaurant', async ({ I }) => {
   I.dontSeeElement('.restaurant__item a');
 
