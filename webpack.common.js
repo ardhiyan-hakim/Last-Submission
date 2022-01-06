@@ -5,7 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin');
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -40,16 +41,13 @@ module.exports = {
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
     new BundleAnalyzerPlugin(),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 50,
-          },
-        },
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
       ],
-      overrideExtension: true,
     }),
   ],
   optimization: {

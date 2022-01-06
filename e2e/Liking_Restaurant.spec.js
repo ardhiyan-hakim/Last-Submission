@@ -33,6 +33,7 @@ Scenario('Liking a restaurant', ({ I }) => {
   I.seeElement(locate('.restaurant__item a article').first());
 
   I.click(locate('.restaurant__item a article').first());
+  I.wait(2);
   I.seeElement('#likeButton');
 
   I.wait(2);
@@ -64,6 +65,8 @@ Scenario('Unliking a restaurant', ({ I }) => {
   I.seeElement(locate('.restaurant__item a article').first());
 
   I.click(locate('.restaurant__item a article').first());
+  I.wait(2);
+  I.waitForElement('#likeButton');
   I.seeElement('#likeButton');
 
   I.wait(2);
