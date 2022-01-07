@@ -8,7 +8,7 @@ const createRestaurantItemTemplate = (restaurant) => `
    <div class="restaurant__item" aria-label="Button to access ${restaurant.name}">
       <a href="#/detail/${restaurant.id}" style="text-decoration: none;">
          <article>
-            <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}" alt="Gambar dari Restoran ${restaurant.name}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}" alt="Gambar dari Restoran ${restaurant.name}">
             <div class="article__content">
                <p>${restaurant.name}</p>
                <div class="article__rating__city">
